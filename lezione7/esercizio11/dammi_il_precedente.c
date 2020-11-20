@@ -3,18 +3,11 @@
 #include <time.h>
 
 unsigned int dammi_il_precedente(unsigned int numero) {
-	static int count = 0;
-	static int prev;
-	printf("Chiamata n %d, numero passato: %u, precedente: %u\n", count+1, numero, prev);
-	if (count == 0) {
-		prev = numero;
-		return count++;
-	} else {
-		unsigned int ret = prev;
-		prev = numero;
-		return count++, ret;
-	}
-	return 0;
+	static unsigned int prev = 0;
+	unsigned int temp = prev;
+	prev = numero;
+	printf("Numero passato: %u, precedente: %u\n", numero, temp);
+	return temp;
 }
 
 int main() {
