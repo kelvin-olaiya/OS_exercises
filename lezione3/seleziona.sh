@@ -1,0 +1,1 @@
+grep A | wc -m
