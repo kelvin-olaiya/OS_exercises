@@ -4,3 +4,5 @@ sposta.sh
 comando.sh
 *.exe
 *.o
+*.tgz
+*_sol/
