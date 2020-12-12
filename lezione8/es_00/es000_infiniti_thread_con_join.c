@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include <stdint.h>	/* uintptr_t */
-#include <inttypes.h>	/* PRIiPTR */
+#include <inttypes.h> /* PRIiPTR */
 #include <pthread.h>
 #include <string.h>
 
@@ -63,7 +63,6 @@ int main()
 		}
 	}
 	
-
 	pthread_exit (NULL);
 	return(0);
 }
