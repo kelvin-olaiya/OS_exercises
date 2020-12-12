@@ -6,7 +6,10 @@
 #include "strutture.h"
 
 #define NUM_THREADS 7
-
+/*
+ *  Non finito, mancano la gestione dei return values
+ *  Liberazione della memoria...
+ */
 void* threadFunc(void * arg) {
     sleep(1);
     if (arg != NULL) {
