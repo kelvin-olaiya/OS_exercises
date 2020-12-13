@@ -1,6 +1,6 @@
 SHELL = /bin/bash
 CFLAGS = -ansi -Wall -Wpedantic -pedantic
-CDEFINE = -D_POSIX_C_SOURCE -D_THREAD_SAFE -D_REENTRANT
+CDEFINE = -D_POSIX_C_SOURCE=200112L -D_THREAD_SAFE -D_REENTRANT
 CLIBRARIES = -lpthread
 
 all: main.exe
