@@ -7,7 +7,7 @@
 #include "DBGpthread.h"
 #include <unistd.h>
 
-#define MICRO_IN_SECOND 1000000
+#define MICRO_IN_SECOND 100000000
 
 #define NUM_BANCHE 3
 #define NUM_THREAD_DEPOSITO 5
@@ -72,6 +72,11 @@ int main() {
     int err;
 
     DBGpthread_mutex_init(&mutex, NULL, "Inizializzazione mutex");
+    /*Inizializzione variabili globali */
+    for (i = 0; i < NUM_BANCHE; i++) {
+        T[i] = 0;
+        N[i] = 0;
+    }
     /* Creazione dei thread */
     for (j = 0; j < NUM_BANCHE; j++) {
         intptr_t indiceBanca = j;
