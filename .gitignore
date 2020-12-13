@@ -6,3 +6,4 @@ comando.sh
 *.o
 *.tgz
 *_sol/
+utils/
